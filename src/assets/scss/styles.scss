@@ -1,0 +1,59 @@
+@import "_variables";
+@import "_null";
+@import "_ui-kit";
+
+// @import "../blocks/ui-color/_ui-color";
+//COMMON SETTINGS
+
+body {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7143rem;
+    color: $dark75;
+}
+h1 {
+    font-weight: 700;
+    font-size: 1.7143rem;
+    line-height: 2.0714rem;
+    color: $dark100;
+}
+h2 {
+    font-weight: 700;
+    font-size: 1.3571rem;
+    line-height: 1.6429rem;
+    color: $dark100;
+}
+h3 {
+    font-weight: 700;
+    font-size: 0.8571rem;
+    line-height: 1.0714rem;
+    text-transform: uppercase;
+    color: $dark100;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+//UI-KIT
+.ui-color {
+    display: flex;
+    flex-direction: row;
+}
+.ui-color__box {
+    width: 4.86%;
+    height: 4.86%;
+}
+
+.ui-color__name {
+    font-weight: 700;
+    font-size: 1.3571rem;
+    line-height: 2rem;
+}
+
+.ui-color__value {
+    font-weight: 400;
+    font-size: 1.3571rem;
+    line-height: 2rem;
+}

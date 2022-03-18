@@ -12,6 +12,7 @@
   "author": "Gostev V.",
   "license": "ISC",
   "devDependencies": {
+    "@prettier/plugin-pug": "^1.19.3",
     "copy-webpack-plugin": "^10.2.4",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
@@ -19,6 +20,7 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "node-sass": "^7.0.1",
+    "prettier": "^2.6.0",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
     "sass-loader": "^12.6.0",

@@ -44,13 +44,17 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 type: 'asset/resource'
+            },
+            {
+                test: /\.(woff|ttf|svg)$/,
+                type: 'asset/resource'
             }
         ]
     },
     plugins: [
         new HTMLWebpackPlugin(
             {
-                template: './index.pug',
+                template: './pug/pages/index.pug',
                 inject: 'body',
                 // minify: {
                 //     collapseWhitespace: isProd,
