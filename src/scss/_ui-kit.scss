@@ -1,0 +1,66 @@
+//Styles for UI-kit pages
+.ui-kit {
+    max-width: 100%;
+    min-height: 100vh;
+    background-image: url(../img/UI-kit-logo.svg);
+    background-repeat: no-repeat;
+    background-position: 2.08vw 2.08vw;
+    background-size: 3.33vw;
+}
+//Colors & Types
+.ui-kit__wrapper {
+    padding: 10vw 10.4vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.ui-colors {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4vw;
+    &__item {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5vw;
+    }
+    &__box {
+        width: 4.86vw;
+        height: 4.86vw;
+        border-radius: 0.4286rem;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.3rem;
+        color: $dark100;
+    }
+    &__name {
+        font-weight: 700;
+        line-height: 2rem;
+    }
+    &__value {
+        font-weight: 400;
+        line-height: 2rem;
+    }
+}
+.ui-types {
+    &__header {
+        text-transform: capitalize;
+        text-align: end;
+        vertical-align: top;
+        h1,
+        h2,
+        h3,
+        p {
+            font-weight: normal;
+            color: $dark25;
+            padding-right: 2.08vw;
+        }
+    }
+    &__text {
+        max-width: 25.625vw;
+        padding-bottom: 3.7vw;
+    }
+}

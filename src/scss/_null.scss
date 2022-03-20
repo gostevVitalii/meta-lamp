@@ -73,3 +73,12 @@ h6 {
     font-size: inherit;
     font-weight: inherit;
 }
+table,
+td,
+tr {
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+}

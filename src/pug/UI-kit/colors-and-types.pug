@@ -1,5 +1,46 @@
 extends ../UI-layout.pug
-block content 
-    +ui-color('Dark Shade 100%', '#1F2041')
+
+block content
+    .ui-kit__wrapper
+
+        -
+            const colors = [{name: 'Dark Shade 100%', bg: 'rgba(31, 32, 65, 1)', value: '#1F2041'},
+                {name: 'Dark Shade 75%', bg: 'rgba(31, 32, 65, 0.75)', value: '#1F2041'},
+                {name: 'Dark Shade 50%', bg: 'rgba(31, 32, 65, 0.5)', value: '#1F2041'},
+                {name: 'Dark Shade 25%', bg: 'rgba(31, 32, 65, 0.25)', value: '#1F2041'},
+                {name: 'Dark Shade 5%', bg: 'rgba(31, 32, 65, 0.05)', value: '#1F2041'},
+                {name: 'Purple', bg: '#BC9CFF', value: '#BC9CFF'},
+                {name: 'Green', bg: '#6FCF97', value: '#6FCF97'}];
+        .ui-colors
+            each color in colors
+                .ui-colors__item
+                    .ui-colors__box(style={ background: color.bg })
+                    .ui-colors__text
+                        .ui-colors__name= color.name
+                        .ui-colors__value= color.value
+
+        table.ui-types 
+            tr.ui-types__item 
+                td.ui-types__header
+                    h1 h1
+                td.ui-types__text
+                    h1 This one is the sub-section or widget title
+            tr.ui-types__item
+                td.ui-types__header
+                    h2 h2
+                td.ui-types__text
+                    h2 Next one is the item title inside widgets
+            tr.ui-types__item
+                td.ui-types__header
+                    h3 h3
+                td.ui-types__text
+                    h3 This is a label or CTA text
+            tr.ui-types__item
+                td.ui-types__header
+                    p body
+                td.ui-types__text
+                    p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+
 
 

@@ -1,10 +1,8 @@
 @import "_variables";
 @import "_null";
 @import "_ui-kit";
-
-// @import "../blocks/ui-color/_ui-color";
+@import "_fonts";
 //COMMON SETTINGS
-
 body {
     font-family: "Montserrat", Arial, sans-serif;
     font-style: normal;
@@ -35,25 +33,4 @@ h3 {
 .container {
     width: 80%;
     margin: 0 auto;
-}
-//UI-KIT
-.ui-color {
-    display: flex;
-    flex-direction: row;
-}
-.ui-color__box {
-    width: 4.86%;
-    height: 4.86%;
-}
-
-.ui-color__name {
-    font-weight: 700;
-    font-size: 1.3571rem;
-    line-height: 2rem;
-}
-
-.ui-color__value {
-    font-weight: 400;
-    font-size: 1.3571rem;
-    line-height: 2rem;
 }
