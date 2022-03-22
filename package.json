@@ -13,6 +13,7 @@
     "watch": "webpack --watch --mode development"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
