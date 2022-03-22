@@ -1,13 +1,9 @@
-extends ../UI-layout.pug
-
-block content
+extends ../ui-layout.pug
+block content 
     .ui-kit__wrapper
-        .col
-            input(type='text' value='email')
-
-
-        .col 
-
-
-        .col 
-
+        +text-input('text field', 'Email')
+        -
+            var checkboxGroup = [{id:'smoke', value: 'smoke',text:'Можно курить'},
+                {id:'pet', value: 'pet', text:'Можно с питомцами'}, 
+                {id:'friends', value:'friends', text:'Можно пригласить гостей (до 10 человек)'}]
+        +checkbox('checkbox buttons', ...checkboxGroup)

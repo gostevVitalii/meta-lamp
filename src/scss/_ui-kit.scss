@@ -1,66 +1,66 @@
-//Styles for UI-kit pages
+//Стили для UI-Kit
+
 .ui-kit {
     max-width: 100%;
     min-height: 100vh;
-    background-image: url(../img/UI-kit-logo.svg);
+    background-image: url("../img/UI-kit-logo.svg");
     background-repeat: no-repeat;
-    background-position: 2.08vw 2.08vw;
-    background-size: 3.33vw;
+    background-position: rs(30) rs(30);
+    background-size: rs(48);
+    &__wrapper {
+        padding: rs(145) rs(150);
+        display: flex;
+        justify-content: space-between;
+    }
 }
-//Colors & Types
-.ui-kit__wrapper {
-    padding: 10vw 10.4vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+
 .ui-colors {
     display: flex;
     flex-direction: column;
-    gap: 1.4vw;
-    &__item {
+    gap: rs(20);
+    .ui-colors__item {
         display: flex;
-        flex-direction: row;
-        gap: 2.5vw;
+        gap: rs(40);
     }
     &__box {
-        width: 4.86vw;
-        height: 4.86vw;
-        border-radius: 0.4286rem;
+        width: rs(70);
+        height: rs(70);
+        border-radius: rs(6);
     }
     &__text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 1.3rem;
+        font-size: 1.3571rem;
+        line-height: 1.9857rem;
         color: $dark100;
     }
     &__name {
         font-weight: 700;
-        line-height: 2rem;
     }
     &__value {
         font-weight: 400;
-        line-height: 2rem;
     }
 }
 .ui-types {
-    &__header {
+    display: flex;
+    flex-direction: column;
+    gap: rs(51);
+    &__item {
+        display: grid;
+        gap: rs(30);
+        grid-template-columns: rs(30) rs(369);
+    }
+    &__mark {
+        display: flex;
+        justify-content: end;
         text-transform: capitalize;
-        text-align: end;
-        vertical-align: top;
         h1,
         h2,
         h3,
         p {
-            font-weight: normal;
+            font-weight: 400;
             color: $dark25;
-            padding-right: 2.08vw;
         }
-    }
-    &__text {
-        max-width: 25.625vw;
-        padding-bottom: 3.7vw;
     }
 }

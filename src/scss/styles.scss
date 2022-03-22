@@ -1,36 +1,32 @@
+@import "_nullstyle";
 @import "_variables";
-@import "_null";
-@import "_ui-kit";
 @import "_fonts";
-//COMMON SETTINGS
+@import "_mixins";
+@import "_ui-kit";
+@import "../blocks/blocks.scss";
 body {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.7143rem;
-    color: $dark75;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.7143rem;
+  color: $dark75;
 }
+//Стили заголовков
 h1 {
-    font-weight: 700;
-    font-size: 1.7143rem;
-    line-height: 2.0714rem;
-    color: $dark100;
+  font-weight: 700;
+  font-size: 1.7143rem;
+  line-height: 2.0714rem;
+  color: $dark100;
 }
 h2 {
-    font-weight: 700;
-    font-size: 1.3571rem;
-    line-height: 1.6429rem;
-    color: $dark100;
+  font-weight: 700;
+  font-size: 1.3571rem;
+  line-height: 1.6543rem;
+  color: $dark100;
 }
 h3 {
-    font-weight: 700;
-    font-size: 0.8571rem;
-    line-height: 1.0714rem;
-    text-transform: uppercase;
-    color: $dark100;
-}
-.container {
-    width: 80%;
-    margin: 0 auto;
+  font-weight: 700;
+  font-size: 0.8571rem;
+  line-height: 1.045rem;
+  color: $dark100;
+  text-transform: uppercase;
 }

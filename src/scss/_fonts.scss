@@ -1,16 +1,18 @@
+// Подключение шрифтов
+
 @font-face {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"),
-        url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("true-type"),
+    src: url("../fonts/Montserrat-Regular/Montserrat-Regular.ttf") format("true-type"),
+        url("../fonts/Montserrat-Regular/Montserrat-Regular.woff") format("woff"),
         url("../fonts/Montserrat-Regular/Montserrat-Regular.svg") format("svg");
 }
 @font-face {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
-    src: url("../fonts/Montserrat-Bold/Montserrat-Bold.woff") format("woff"),
-        url("../fonts/Montserrat-Bold/Montserrat-Bold.ttf") format("true-type"),
+    src: url("../fonts/Montserrat-Bold/Montserrat-Bold.ttf") format("true-type"),
+        url("../fonts/Montserrat-Bold/Montserrat-Bold.woff") format("woff"),
         url("../fonts/Montserrat-Bold/Montserrat-Bold.svg") format("svg");
 }

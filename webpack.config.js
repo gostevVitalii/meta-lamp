@@ -1,45 +1,41 @@
+const webpack = require('webpack')
 const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HTMLWebpackPugPlugin = require('html-webpack-pug-plugin')
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const isDev = process.env.NODE_ENV === 'development'
-const isProd = !isDev
+const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
 
-module.exports = {
+const config = {
     mode: 'development',
     context: path.resolve(__dirname, 'src'),
     entry: {
-        app: './index.js'
+        app: './js/index.js'
     },
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js',
         clean: true
-    },
-    resolve: {
-        // extensions: ['js', 'svg'],
-        alias: {
-            '@': path.resolve(__dirname, 'src')
-        }
-    },
-    optimization: {
-        splitChunks: {
-            chunks: 'all'
-        }
     },
     module: {
         rules: [
             {
+                test: /\.js$/,
+                use: 'babel-loader',
+                exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
+            {
                 test: /\.pug$/,
                 loader: 'pug-loader'
-            },
-            {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
-            },
-            {
-                test: /\.scss$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -52,28 +48,27 @@ module.exports = {
         ]
     },
     plugins: [
-        new HTMLWebpackPlugin(
-            {
-                template: './pug/pages/index.pug',
-                inject: 'body',
-                // minify: {
-                //     collapseWhitespace: isProd,
+        new CopyPlugin({
+            patterns: [{ from: 'img', to: 'img' },
 
-                // }
-            }
-        ),
-        // new CopyWebpackPlugin([
-
-        // ]),
-        new MiniCssExtractPlugin({
-            filename: '[name].css'
-        })
+            ],
+        }),
+        new HtmlWebpackPlugin({
+            template: './pug/pages/index.pug',
+            filename: 'index.html'
+        }),
+        new HtmlWebpackPugPlugin(),
+        new LodashModuleReplacementPlugin(),
+        new MiniCssExtractPlugin()
     ],
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'),
         },
+        hot: true,
         compress: true,
-        port: 9200,
+        port: 8081
     }
-}
+};
+
+module.exports = config;
