@@ -5,28 +5,32 @@
 @import "_ui-kit";
 @import "../blocks/blocks.scss";
 body {
-  font-family: "Montserrat";
-  font-size: 14px;
-  line-height: 1.7143rem;
-  color: $dark75;
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 1.7143rem;
+    color: $dark75;
+}
+.icon {
+    font-family: "Material";
+    font-size: 1.7143rem;
 }
 //Стили заголовков
 h1 {
-  font-weight: 700;
-  font-size: 1.7143rem;
-  line-height: 2.0714rem;
-  color: $dark100;
+    font-weight: 700;
+    font-size: 1.7143rem;
+    line-height: 2.0714rem;
+    color: $dark100;
 }
 h2 {
-  font-weight: 700;
-  font-size: 1.3571rem;
-  line-height: 1.6543rem;
-  color: $dark100;
+    font-weight: 700;
+    font-size: 1.3571rem;
+    line-height: 1.6543rem;
+    color: $dark100;
 }
 h3 {
-  font-weight: 700;
-  font-size: 0.8571rem;
-  line-height: 1.045rem;
-  color: $dark100;
-  text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8571rem;
+    line-height: 1.045rem;
+    color: $dark100;
+    text-transform: uppercase;
 }

@@ -61,6 +61,11 @@ const config = {
         new LodashModuleReplacementPlugin(),
         new MiniCssExtractPlugin()
     ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
+    },
     devServer: {
         static: {
             directory: path.join(__dirname, 'dist'),

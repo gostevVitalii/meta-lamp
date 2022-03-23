@@ -13,8 +13,11 @@
     "watch": "webpack --watch --mode development"
   },
   "dependencies": {
+    "install": "^0.13.0",
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "material-icons": "^1.10.8",
+    "npm": "^8.5.5"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

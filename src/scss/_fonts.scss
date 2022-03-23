@@ -16,3 +16,12 @@
         url("../fonts/Montserrat-Bold/Montserrat-Bold.woff") format("woff"),
         url("../fonts/Montserrat-Bold/Montserrat-Bold.svg") format("svg");
 }
+@font-face {
+    font-family: "Material";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Material-Icons/Material-Icons.ttf") format("true-type"),
+        url("../fonts/Material-Icons/Material-Icons.woff2") format("woff2"),
+        url("../fonts/Material-Icons/Material-Icons.woff") format("woff"),
+        url("../fonts/Material-Icons/Material-Icons.svg") format("svg");
+}

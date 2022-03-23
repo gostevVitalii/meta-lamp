@@ -1,10 +1,16 @@
 extends ../ui-layout.pug
 block content 
     .ui-kit__wrapper
-        +text-input('text field', 'Email')
-        -
-            var checkboxGroup = [{id:'smoke', value: 'smoke',text:'Можно курить'},
-                {id:'pet', value: 'pet', text:'Можно с питомцами'}, 
-                {id:'friends', value:'friends', text:'Можно пригласить гостей (до 10 человек)'}]
-        +checkbox('checkbox buttons', ...checkboxGroup)
-        .jquery
+        .col
+            +text-input('text field', 'Email')
+            -
+                var items = [{value: 'smoke',text:'Можно курить'},
+                    {value: 'pet', text:'Можно с питомцами'}, 
+                    {value:'friends', text:'Можно пригласить гостей (до 10 человек)'}]
+            each item in items
+                +checkbox(item.value, item.text)
+            +dropdown
+            input(type="datetime", name="date")
+           
+            
+

@@ -9,6 +9,7 @@
         &:hover,
         &:focus {
             color: $dark75;
+            border: 1px solid $dark50;
         }
     }
 }

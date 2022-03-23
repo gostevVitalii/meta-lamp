@@ -1,7 +1,5 @@
-mixin checkbox(text='checkbox items', ...items)
-    .checkbox
-        h3= text
-        each item in items
-            input(type="checkbox" value=item.value)
-            label(for=item.id)= item.text
-                br
+mixin checkbox(value='value', text='text')
+    label.checkbox
+        input(class='checkbox__box' type="checkbox" value=value)
+        .checkbox__custom
+        .checkbox__text= text 
