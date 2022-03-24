@@ -1,15 +1,12 @@
 .text-input {
-    input {
-        padding: rs(13) rs(15);
-        margin-top: rs(5);
-        border: 1px solid $dark25;
-        border-radius: rs(4);
-        color: $dark25;
-        width: rs(320);
-        &:hover,
-        &:focus {
-            color: $dark75;
-            border: 1px solid $dark50;
-        }
+    padding: rs(13) rs(15);
+    border: 1px solid $dark25;
+    border-radius: 0.2857rem;
+    color: $dark25;
+    width: rs(320);
+    &:hover,
+    &:focus {
+        color: $dark75;
+        border: 1px solid $dark50;
     }
 }

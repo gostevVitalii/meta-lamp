@@ -1,24 +1,13 @@
 .dropdown {
-    max-width: rs(320);
-    border-radius: rs(4);
-    border: $input-border;
-
-    &__input {
-        height: rs(44);
+    &__body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-    }
-    &__text {
-        padding-left: rs(15);
-    }
-    &__btn {
-        height: rs(44);
-        width: rs(44);
-        display: flex;
-        justify-content: center;
-        align-items: center;
         cursor: pointer;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        display: none;
     }
 }

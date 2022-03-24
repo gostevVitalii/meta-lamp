@@ -2,7 +2,9 @@ extends ../ui-layout.pug
 block content 
     .ui-kit__wrapper
         .col
-            +text-input('text field', 'Email')
+            h3 text field
+            +text-input('email', 'Email')
+            +text-input('name', 'Name')
             -
                 var items = [{value: 'smoke',text:'Можно курить'},
                     {value: 'pet', text:'Можно с питомцами'}, 
@@ -10,7 +12,13 @@ block content
             each item in items
                 +checkbox(item.value, item.text)
             +dropdown
-            input(type="datetime", name="date")
-           
             
+            -
+                var bulletListItems = ['Нельзя с питомцами',
+                    'Без вечеринок и мероприятий',
+                    'Время прибытия — после 13:00, а выезд до 12:00']
+            +bullet-list('bullet list', ...bulletListItems)
+            +btn('кнопка', 'arrow')
+            +btn-arrow('Forward')
 
+           

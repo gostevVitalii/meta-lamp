@@ -7,8 +7,11 @@
     background-repeat: no-repeat;
     background-position: rs(30) rs(30);
     background-size: rs(48);
-    padding: rs(145) rs(150);
+    padding-top: rs(145);
+    background-color: $dark5;
+
     &__wrapper {
+        padding: 0 rs(150);
         display: flex;
         justify-content: space-between;
     }

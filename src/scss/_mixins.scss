@@ -2,3 +2,7 @@
 @function rs($px) {
     @return ($px/14.4) + vw;
 }
+@mixin btnSize($size) {
+    height: rs($size);
+    border-radius: rs($size/2);
+}

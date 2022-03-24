@@ -1,0 +1,39 @@
+.nav {
+    background: white;
+    width: 100%;
+    height: rs(70);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.4286rem;
+    }
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.4286rem;
+    }
+    &__link {
+        color: $dark50;
+    }
+    &__user {
+        height: rs(30);
+        border-left: 1px solid $dark10;
+        padding-left: 1.4286rem;
+        color: $dark50;
+        display: flex;
+        align-items: center;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.4286rem;
+    }
+}

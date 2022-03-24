@@ -1,2 +1,18 @@
-mixin header(text='Mixin header')
-    h1= text
+mixin header(logIn)
+    -var autorized= logIn
+    header(class='nav container')
+        .nav__logo 
+            img(src="../img/logo.svg", alt="")
+        .nav__content 
+            .nav__menu 
+                a(href="http://" class='nav__link') О нас
+                a(href="http://" class='nav__link') Услуги
+                a(href="http://" class='nav__link') Вакансии
+                a(href="http://" class='nav__link') Новое
+                a(href="http://" class='nav__link') Соглашения
+            if !autorized
+                .nav__buttons 
+                    +btn('Войти', 'border-nav')
+                    +btn('Зарегистрироваться', 'primary-nav')
+            else
+                .nav__user Константин Константинопольский

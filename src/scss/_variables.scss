@@ -5,9 +5,14 @@ $dark100: rgba(31, 32, 65, 1);
 $dark75: rgba(31, 32, 65, 0.75);
 $dark50: rgba(31, 32, 65, 0.5);
 $dark25: rgba(31, 32, 65, 0.25);
+$dark10: rgba(31, 32, 65, 0.1);
 $dark5: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
 
 //Границы
 $input-border: 1px solid $dark25;
+
+//Градиент
+
+$primary-gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);

@@ -1,0 +1,38 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 0.8571rem;
+    &_primary {
+        @include btnSize(44);
+        padding: 1.0714rem 1.4286rem;
+        background: $primary-gradient;
+    }
+    &_border {
+        @include btnSize(44);
+        padding: 1.0714rem 1.4286rem;
+        border: 2px solid $purple;
+        background: none;
+        color: $purple;
+    }
+    &_no-border {
+        border: none;
+        background: none;
+        color: $purple;
+    }
+    &_primary-nav {
+        @include btnSize(34);
+        padding: 0.7143rem 1.4286rem;
+        background: $primary-gradient;
+    }
+    &_border-nav {
+        @include btnSize(34);
+        padding: 0.7143rem 1.4286rem;
+        border: 2px solid $purple;
+        background: none;
+        color: $purple;
+    }
+}

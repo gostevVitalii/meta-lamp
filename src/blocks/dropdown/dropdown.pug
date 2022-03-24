@@ -1,7 +1,9 @@
-mixin dropdown
-    .dropdown   
-        .dropdown__input
-            .dropdown__text Сколько гостей
-            div(class='dropdown__btn icon') expand_more
+mixin dropdown(text='Expand more', ...arr)
+    .dropdown 
+        .dropdown__body= text
+            span.icon expand_more
 
         .dropdown__content
+            each item in arr 
+                item
+            

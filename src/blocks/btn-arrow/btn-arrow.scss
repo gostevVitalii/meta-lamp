@@ -1,0 +1,14 @@
+.btn-arrow {
+    @include btnSize(44);
+    width: rs(320);
+    background: $primary-gradient;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8571rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: end;
+    .icon {
+        text-transform: lowercase;
+    }
+}

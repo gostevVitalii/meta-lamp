@@ -1,2 +1,3 @@
-mixin btn(text, mod)
-    button(class='btn')= text
+mixin btn(text='click me', style)
+    button(class=`btn btn_${style}`)= text
+    
