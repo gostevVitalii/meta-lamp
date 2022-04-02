@@ -1,24 +1,43 @@
 extends ../ui-layout.pug
 block content 
-    .ui-kit__wrapper
+    .ui-kit__form-elements
         .col
             h3 text field
             +text-input('email', 'Email')
             +text-input('name', 'Name')
             -
-                var items = [{value: 'smoke',text:'Можно курить'},
+                var dropItems = ['Первый элемент',
+                    'Второй элемент', 
+                    'Третий элемент']
+
+            +dropdown('Expand more', ...dropItems)
+
+            +btn('кнопка', 'arrow')
+            +btn-arrow('Forward')
+            -
+                var serviceItems = [{link: '/booking', text: 'Бронирование'},
+                    {link: '/cleaning', text: 'Уборка'}, 
+                    {link: '/transfer', text: 'Трансфер'}]
+
+            +menu-dropdown('Услуги', 'service', ...serviceItems)
+
+        .col
+            -
+                var checkboxItems = [{value: 'smoke',text:'Можно курить'},
                     {value: 'pet', text:'Можно с питомцами'}, 
                     {value:'friends', text:'Можно пригласить гостей (до 10 человек)'}]
-            each item in items
-                +checkbox(item.value, item.text)
-            +dropdown
-            
+            +checkbox-group('checkbox buttons', '', ...checkboxItems)
+
+
+            -
+                var richCheckboxItems = [{value: 'koridor',text:'Широкий коридор', description: 'Ширина коридоров в номере не менее 91 см.'},
+                    {value: 'helper',text:'Помощник для инвалидов', description: 'На 1 этаже вас встретит специалист  и проводит до номера.'}]
+            +checkbox-group('rich checkbox buttons', 'rich', ...richCheckboxItems)
+        .col
             -
                 var bulletListItems = ['Нельзя с питомцами',
                     'Без вечеринок и мероприятий',
                     'Время прибытия — после 13:00, а выезд до 12:00']
             +bullet-list('bullet list', ...bulletListItems)
-            +btn('кнопка', 'arrow')
-            +btn-arrow('Forward')
 
-           
+

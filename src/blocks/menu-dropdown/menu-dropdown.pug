@@ -1,0 +1,9 @@
+mixin menu-dropdown(text='Expand more', id= 'id', ...arr)
+    .menu-dropdown 
+        div(class='menu-dropdown__text' id=id)= text
+            span(class='icon') expand_more
+
+        .menu-dropdown__content
+            each item in arr 
+                .menu-dropdown__item
+                    a(class= 'menu-dropdown__link nav__link' href=item.link)= item.text

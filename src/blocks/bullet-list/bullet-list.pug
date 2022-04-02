@@ -1,5 +1,6 @@
 mixin bullet-list(header, ...arr)
-    h3= header 
-    ul.bullet-list
-        each item in arr 
-            li.bullet-list__item= item
+    .bullet-list
+        h3.bullet-list__header= header 
+        ul.bullet-list__list
+            each item in arr 
+                li.bullet-list__item= item

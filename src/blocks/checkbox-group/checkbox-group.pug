@@ -1,0 +1,8 @@
+//- Миксин группа чекбоксов - простой и rich-checkbox модификатор (чтобы его реализовать нужно указать параметр mod=checkbox_rich)
+
+mixin checkbox-group(text='checkbox buttons', mod = '', ...arr)
+    .checkbox-group
+        h3.checkbox-group__heading= text 
+        each item in arr            
+            .checkbox-group__item.checkbox(class=`checkbox_${mod}`)
+                +checkbox(item.value, item.text, item.description)

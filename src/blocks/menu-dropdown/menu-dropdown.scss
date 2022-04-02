@@ -1,0 +1,11 @@
+.menu-dropdown {
+    background-color: white;
+    box-shadow: $dark25;
+    &__text {
+        vertical-align: middle;
+        cursor: pointer;
+        .icon {
+            vertical-align: middle;
+        }
+    }
+}

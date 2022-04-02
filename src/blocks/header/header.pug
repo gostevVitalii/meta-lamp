@@ -1,15 +1,20 @@
 mixin header(logIn)
     -var autorized= logIn
+    -
+        var serviceItems = [{link: '/booking', text: 'Бронирование'},
+            {link: '/cleaning', text: 'Уборка'}, 
+            {link: '/transfer', text: 'Трансфер'}]
     header(class='nav container')
         .nav__logo 
             img(src="../img/logo.svg", alt="")
         .nav__content 
+
             .nav__menu 
-                a(href="http://" class='nav__link') О нас
-                a(href="http://" class='nav__link') Услуги
-                a(href="http://" class='nav__link') Вакансии
-                a(href="http://" class='nav__link') Новое
-                a(href="http://" class='nav__link') Соглашения
+                a(href="http://", class='nav__link') О нас
+                +menu-dropdown('Услуги', 'service', ...serviceItems)
+                a(href="http://", class='nav__link') Вакансии
+                a(href="http://", class='nav__link') Новое
+                a(href="http://", class='nav__link') Соглашения
             if !autorized
                 .nav__buttons 
                     +btn('Войти', 'border-nav')

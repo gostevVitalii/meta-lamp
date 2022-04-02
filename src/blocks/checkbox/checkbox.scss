@@ -1,9 +1,11 @@
 .checkbox {
-    display: flex;
-    flex-direction: row;
-    gap: 0.7143rem;
-    align-items: center;
-    cursor: pointer;
+    &__button {
+        display: flex;
+        flex-direction: row;
+        gap: 0.7143rem;
+        align-items: flex-start;
+        cursor: pointer;
+    }
     &__box {
         position: absolute;
         z-index: -1;
@@ -27,5 +29,22 @@
         font-size: 1rem;
         line-height: 1.2857rem;
         color: $dark50;
+        max-width: rs(220);
+    }
+}
+
+.checkbox_rich {
+    .checkbox__text {
+        font-weight: 700;
+        color: $dark75;
+        margin-bottom: 0.3571rem;
+        max-width: rs(270);
+    }
+    .checkbox__description {
+        padding-left: 2.1429rem;
+        font-size: 0.8571rem;
+        line-height: 1rem;
+        color: $dark50;
+        max-width: rs(270);
     }
 }

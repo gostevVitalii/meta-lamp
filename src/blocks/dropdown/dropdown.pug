@@ -1,9 +1,8 @@
 mixin dropdown(text='Expand more', ...arr)
     .dropdown 
         .dropdown__body= text
-            span.icon expand_more
+            span(class='dropdown__arrow icon') expand_more
 
         .dropdown__content
             each item in arr 
-                item
-            
+                p= item

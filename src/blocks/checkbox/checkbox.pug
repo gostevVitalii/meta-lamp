@@ -1,5 +1,7 @@
-mixin checkbox(value='value', text='text')
-    label.checkbox
-        input(class='checkbox__box' type="checkbox" value=value)
-        .checkbox__custom
-        .checkbox__text= text 
+mixin checkbox(value='value', text='text', description='')
+    label
+        .checkbox__button
+            input(class='checkbox__box', type="checkbox" value=value)
+            .checkbox__custom
+            .checkbox__text= text
+        .checkbox__description= description

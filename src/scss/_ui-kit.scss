@@ -7,13 +7,17 @@
     background-repeat: no-repeat;
     background-position: rs(30) rs(30);
     background-size: rs(48);
-    padding-top: rs(145);
     background-color: $dark5;
+    padding: 0 rs(150);
+    padding-top: rs(145);
 
-    &__wrapper {
-        padding: 0 rs(150);
+    &__colors-and-types {
         display: flex;
         justify-content: space-between;
+    }
+    &__form-elements {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
